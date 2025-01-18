@@ -1,0 +1,316 @@
+[gd_scene load_steps=8 format=3 uid="uid://18dbfxlkyd4l"]
+
+[ext_resource type="Texture2D" uid="uid://dmvkweec8s2rd" path="res://assets/UI_Elements/CharacterSheet.png" id="1_6ur27"]
+[ext_resource type="Texture2D" uid="uid://rx1kthwtqm3x" path="res://assets/UI_Elements/ItemFrame.png" id="2_lrvgl"]
+[ext_resource type="Texture2D" uid="uid://dqtsupolbpbe0" path="res://assets/UI_Elements/InventoryHelmet.png" id="3_821md"]
+[ext_resource type="Texture2D" uid="uid://ddexykwbm3bil" path="res://assets/UI_Elements/InventoryWeapon.png" id="4_7ngke"]
+[ext_resource type="FontFile" uid="uid://dcasp0ab774cs" path="res://assets/Fonts/PixelifySans-Bold.ttf" id="5_ex501"]
+[ext_resource type="FontFile" uid="uid://bd26rwsqbld3u" path="res://assets/Fonts/PixelifySans-Regular.ttf" id="6_l8pxj"]
+[ext_resource type="Texture2D" uid="uid://cpt0rsp8tb15i" path="res://assets/UI_Elements/character.png" id="7_w18f8"]
+
+[node name="CharacterSheet" type="Control"]
+custom_minimum_size = Vector2(580, 690)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 100.0
+offset_top = 200.0
+offset_right = -1240.0
+offset_bottom = -190.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Background" type="NinePatchRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_6ur27")
+
+[node name="M" type="MarginContainer" parent="Background"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="Main" type="HBoxContainer" parent="Background/M"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 0
+
+[node name="LeftEquip" type="VBoxContainer" parent="Background/M/Main"]
+custom_minimum_size = Vector2(130, 0)
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="MarginContainer" type="MarginContainer" parent="Background/M/Main/LeftEquip"]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+
+[node name="Head" type="TextureRect" parent="Background/M/Main/LeftEquip"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("2_lrvgl")
+
+[node name="Icon" type="TextureRect" parent="Background/M/Main/LeftEquip/Head"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_821md")
+
+[node name="Neck" type="TextureRect" parent="Background/M/Main/LeftEquip"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("2_lrvgl")
+
+[node name="Icon" type="TextureRect" parent="Background/M/Main/LeftEquip/Neck"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_7ngke")
+
+[node name="Chest" type="TextureRect" parent="Background/M/Main/LeftEquip"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("2_lrvgl")
+
+[node name="Icon" type="TextureRect" parent="Background/M/Main/LeftEquip/Chest"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_7ngke")
+
+[node name="Legs" type="TextureRect" parent="Background/M/Main/LeftEquip"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("2_lrvgl")
+
+[node name="Icon" type="TextureRect" parent="Background/M/Main/LeftEquip/Legs"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_7ngke")
+
+[node name="Feet" type="TextureRect" parent="Background/M/Main/LeftEquip"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("2_lrvgl")
+
+[node name="Icon" type="TextureRect" parent="Background/M/Main/LeftEquip/Feet"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_7ngke")
+
+[node name="Middle" type="Control" parent="Background/M/Main"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="NameBackground" type="TextureRect" parent="Background/M/Main/Middle"]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+grow_horizontal = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Background/M/Main/Middle/NameBackground"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Name" type="Label" parent="Background/M/Main/Middle/NameBackground/VBoxContainer"]
+custom_minimum_size = Vector2(0, 45)
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_ex501")
+theme_override_font_sizes/font_size = 40
+text = "GenericName"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="LevelClass" type="Label" parent="Background/M/Main/Middle/NameBackground/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 6
+theme_override_fonts/font = ExtResource("6_l8pxj")
+text = "Level"
+horizontal_alignment = 1
+
+[node name="Silhouette" type="TextureRect" parent="Background/M/Main/Middle"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 30.0
+offset_top = 90.0
+offset_right = -30.0
+offset_bottom = -80.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("7_w18f8")
+expand_mode = 1
+
+[node name="MiddleEquip" type="HBoxContainer" parent="Background/M/Main/Middle"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_vertical = 0
+theme_override_constants/separation = 30
+alignment = 1
+
+[node name="MainHand" type="TextureRect" parent="Background/M/Main/Middle/MiddleEquip"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("2_lrvgl")
+
+[node name="Icon" type="TextureRect" parent="Background/M/Main/Middle/MiddleEquip/MainHand"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="OffHand" type="TextureRect" parent="Background/M/Main/Middle/MiddleEquip"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("2_lrvgl")
+
+[node name="Icon" type="TextureRect" parent="Background/M/Main/Middle/MiddleEquip/OffHand"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="RightEquip" type="VBoxContainer" parent="Background/M/Main"]
+custom_minimum_size = Vector2(130, 0)
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="MarginContainer" type="MarginContainer" parent="Background/M/Main/RightEquip"]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+
+[node name="Head" type="TextureRect" parent="Background/M/Main/RightEquip"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("2_lrvgl")
+
+[node name="Icon" type="TextureRect" parent="Background/M/Main/RightEquip/Head"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_821md")
+
+[node name="Neck" type="TextureRect" parent="Background/M/Main/RightEquip"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("2_lrvgl")
+
+[node name="Icon" type="TextureRect" parent="Background/M/Main/RightEquip/Neck"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_7ngke")
+
+[node name="Chest" type="TextureRect" parent="Background/M/Main/RightEquip"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("2_lrvgl")
+
+[node name="Icon" type="TextureRect" parent="Background/M/Main/RightEquip/Chest"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_7ngke")
+
+[node name="Legs" type="TextureRect" parent="Background/M/Main/RightEquip"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("2_lrvgl")
+
+[node name="Icon" type="TextureRect" parent="Background/M/Main/RightEquip/Legs"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_7ngke")
+
+[node name="Feet" type="TextureRect" parent="Background/M/Main/RightEquip"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("2_lrvgl")
+
+[node name="Icon" type="TextureRect" parent="Background/M/Main/RightEquip/Feet"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_7ngke")

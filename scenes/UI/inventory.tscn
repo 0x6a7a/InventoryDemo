@@ -1,0 +1,116 @@
+[gd_scene load_steps=8 format=3 uid="uid://b4uwfrmqvpk5p"]
+
+[ext_resource type="Texture2D" uid="uid://bj5c0tndw4ywg" path="res://assets/UI_Elements/Inventory.png" id="1_b3a7x"]
+[ext_resource type="Script" path="res://scenes/UI/inventory.gd" id="1_nm1rt"]
+[ext_resource type="Texture2D" uid="uid://b8y3gtdlhx46e" path="res://assets/UI_Elements/InventoryName.png" id="2_5tkx7"]
+[ext_resource type="Texture2D" uid="uid://bjhm4bv05v642" path="res://assets/UI_Elements/InventoryFrame.png" id="2_di4vc"]
+[ext_resource type="FontFile" uid="uid://dcasp0ab774cs" path="res://assets/Fonts/PixelifySans-Bold.ttf" id="3_qb37b"]
+[ext_resource type="Texture2D" uid="uid://cmsho618lf5ir" path="res://assets/UI_Elements/Exit.png" id="4_xowwh"]
+[ext_resource type="Texture2D" uid="uid://cg2e5ealslkq6" path="res://assets/UI_Elements/ExitPressed.png" id="5_v68es"]
+
+[node name="Inventory" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1000.0
+offset_top = 200.0
+offset_right = -340.0
+offset_bottom = -190.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_nm1rt")
+
+[node name="Background" type="NinePatchRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_b3a7x")
+
+[node name="M" type="MarginContainer" parent="Background"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 10
+
+[node name="V" type="VBoxContainer" parent="Background/M"]
+layout_mode = 2
+theme_override_constants/separation = 25
+
+[node name="Header" type="HBoxContainer" parent="Background/M/V"]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+
+[node name="Control" type="Control" parent="Background/M/V/Header"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="TitleBackground" type="TextureRect" parent="Background/M/V/Header"]
+custom_minimum_size = Vector2(325, 0)
+layout_mode = 2
+texture = ExtResource("2_5tkx7")
+
+[node name="Label" type="Label" parent="Background/M/V/Header/TitleBackground"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_qb37b")
+theme_override_font_sizes/font_size = 50
+text = "Inventory"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Exit" type="Control" parent="Background/M/V/Header"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Button" type="TextureButton" parent="Background/M/V/Header/Exit"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -25.0
+offset_top = -25.0
+offset_right = 25.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("4_xowwh")
+texture_pressed = ExtResource("5_v68es")
+stretch_mode = 0
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Background/M/V"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="GridContainer" type="GridContainer" parent="Background/M/V/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/h_separation = 12
+theme_override_constants/v_separation = 12
+columns = 5
+
+[node name="Foreground" type="NinePatchRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_di4vc")
