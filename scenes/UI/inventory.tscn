@@ -42,41 +42,25 @@ theme_override_constants/margin_top = 10
 theme_override_constants/margin_right = 20
 theme_override_constants/margin_bottom = 10
 
-[node name="V" type="VBoxContainer" parent="Background/M"]
+[node name="T" type="TabContainer" parent="Background/M"]
+self_modulate = Color(1, 1, 1, 0)
 layout_mode = 2
-theme_override_constants/separation = 25
+current_tab = 0
+tabs_visible = false
 
-[node name="Header" type="HBoxContainer" parent="Background/M/V"]
+[node name="V" type="VBoxContainer" parent="Background/M/T"]
+layout_mode = 2
+metadata/_tab_index = 0
+
+[node name="Header" type="HBoxContainer" parent="Background/M/T/V"]
 custom_minimum_size = Vector2(0, 80)
 layout_mode = 2
 
-[node name="Control" type="Control" parent="Background/M/V/Header"]
+[node name="Exit2" type="Control" parent="Background/M/T/V/Header"]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="TitleBackground" type="TextureRect" parent="Background/M/V/Header"]
-custom_minimum_size = Vector2(325, 0)
-layout_mode = 2
-texture = ExtResource("2_5tkx7")
-
-[node name="Label" type="Label" parent="Background/M/V/Header/TitleBackground"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_fonts/font = ExtResource("3_qb37b")
-theme_override_font_sizes/font_size = 50
-text = "Inventory"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="Exit" type="Control" parent="Background/M/V/Header"]
-layout_mode = 2
-size_flags_horizontal = 3
-
-[node name="Button" type="TextureButton" parent="Background/M/V/Header/Exit"]
+[node name="Button" type="TextureButton" parent="Background/M/T/V/Header/Exit2"]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 1
 anchors_preset = 8
@@ -94,11 +78,135 @@ texture_normal = ExtResource("4_xowwh")
 texture_pressed = ExtResource("5_v68es")
 stretch_mode = 0
 
-[node name="ScrollContainer" type="ScrollContainer" parent="Background/M/V"]
+[node name="TitleBackground" type="TextureRect" parent="Background/M/T/V/Header"]
+custom_minimum_size = Vector2(325, 0)
+layout_mode = 2
+texture = ExtResource("2_5tkx7")
+
+[node name="Label" type="Label" parent="Background/M/T/V/Header/TitleBackground"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_qb37b")
+theme_override_font_sizes/font_size = 50
+text = "Inventory"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Exit" type="Control" parent="Background/M/T/V/Header"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Button" type="TextureButton" parent="Background/M/T/V/Header/Exit"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -25.0
+offset_top = -25.0
+offset_right = 25.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("4_xowwh")
+texture_pressed = ExtResource("5_v68es")
+stretch_mode = 0
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Background/M/T/V"]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="GridContainer" type="GridContainer" parent="Background/M/V/ScrollContainer"]
+[node name="GridContainer" type="GridContainer" parent="Background/M/T/V/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/h_separation = 12
+theme_override_constants/v_separation = 12
+columns = 5
+
+[node name="V2" type="VBoxContainer" parent="Background/M/T"]
+visible = false
+layout_mode = 2
+theme_override_constants/separation = 25
+metadata/_tab_index = 1
+
+[node name="Header" type="HBoxContainer" parent="Background/M/T/V2"]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+
+[node name="Exit2" type="Control" parent="Background/M/T/V2/Header"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Button" type="TextureButton" parent="Background/M/T/V2/Header/Exit2"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -25.0
+offset_top = -25.0
+offset_right = 25.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("4_xowwh")
+texture_pressed = ExtResource("5_v68es")
+stretch_mode = 0
+
+[node name="TitleBackground" type="TextureRect" parent="Background/M/T/V2/Header"]
+custom_minimum_size = Vector2(325, 0)
+layout_mode = 2
+texture = ExtResource("2_5tkx7")
+
+[node name="Label" type="Label" parent="Background/M/T/V2/Header/TitleBackground"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_qb37b")
+theme_override_font_sizes/font_size = 50
+text = "Inventory"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Exit" type="Control" parent="Background/M/T/V2/Header"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Button" type="TextureButton" parent="Background/M/T/V2/Header/Exit"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -25.0
+offset_top = -25.0
+offset_right = 25.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("4_xowwh")
+texture_pressed = ExtResource("5_v68es")
+stretch_mode = 0
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Background/M/T/V2"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="GridContainer" type="GridContainer" parent="Background/M/T/V2/ScrollContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -115,3 +223,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("2_di4vc")
+
+[connection signal="pressed" from="Background/M/T/V/Header/Exit2/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Background/M/T/V2/Header/Exit2/Button" to="." method="_on_button_pressed"]

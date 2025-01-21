@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://18dbfxlkyd4l"]
+[gd_scene load_steps=10 format=3 uid="uid://18dbfxlkyd4l"]
 
 [ext_resource type="Texture2D" uid="uid://dmvkweec8s2rd" path="res://assets/UI_Elements/CharacterSheet.png" id="1_6ur27"]
 [ext_resource type="Texture2D" uid="uid://rx1kthwtqm3x" path="res://assets/UI_Elements/ItemFrame.png" id="2_lrvgl"]
@@ -7,7 +7,6 @@
 [ext_resource type="FontFile" uid="uid://dcasp0ab774cs" path="res://assets/Fonts/PixelifySans-Bold.ttf" id="5_ex501"]
 [ext_resource type="FontFile" uid="uid://bd26rwsqbld3u" path="res://assets/Fonts/PixelifySans-Regular.ttf" id="6_l8pxj"]
 [ext_resource type="Texture2D" uid="uid://cpt0rsp8tb15i" path="res://assets/UI_Elements/character.png" id="7_w18f8"]
-[ext_resource type="Texture2D" uid="uid://yfmihwsvl53x" path="res://assets/ItemIcons/Axe.png" id="8_phfio"]
 [ext_resource type="Script" path="res://scenes/UI/EquipmentSlot.gd" id="8_vu3bg"]
 [ext_resource type="Texture2D" uid="uid://byltskmcryked" path="res://assets/ItemIcons/Steel Armor.png" id="10_g6fjj"]
 
@@ -68,9 +67,13 @@ texture = ExtResource("2_lrvgl")
 
 [node name="Icon" type="TextureRect" parent="Background/M/Main/LeftEquip/Head"]
 layout_mode = 1
-anchors_preset = 15
+anchors_preset = -1
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = -8.0
+offset_bottom = -8.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("3_821md")
@@ -85,9 +88,13 @@ texture = ExtResource("2_lrvgl")
 
 [node name="Icon" type="TextureRect" parent="Background/M/Main/LeftEquip/Neck"]
 layout_mode = 1
-anchors_preset = 15
+anchors_preset = -1
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = -8.0
+offset_bottom = -8.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("4_7ngke")
@@ -102,9 +109,13 @@ texture = ExtResource("2_lrvgl")
 
 [node name="Icon" type="TextureRect" parent="Background/M/Main/LeftEquip/Chest"]
 layout_mode = 1
-anchors_preset = 15
+anchors_preset = -1
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = -8.0
+offset_bottom = -8.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("4_7ngke")
@@ -119,9 +130,13 @@ texture = ExtResource("2_lrvgl")
 
 [node name="Icon" type="TextureRect" parent="Background/M/Main/LeftEquip/Legs"]
 layout_mode = 1
-anchors_preset = 15
+anchors_preset = -1
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = -8.0
+offset_bottom = -8.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("4_7ngke")
@@ -136,9 +151,13 @@ texture = ExtResource("2_lrvgl")
 
 [node name="Icon" type="TextureRect" parent="Background/M/Main/LeftEquip/Feet"]
 layout_mode = 1
-anchors_preset = 15
+anchors_preset = -1
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = -8.0
+offset_bottom = -8.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("4_7ngke")
@@ -213,12 +232,15 @@ texture = ExtResource("2_lrvgl")
 
 [node name="Icon" type="TextureRect" parent="Background/M/Main/Middle/MiddleEquip/MainHand"]
 layout_mode = 1
-anchors_preset = 15
+anchors_preset = -1
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = -8.0
+offset_bottom = -8.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("8_phfio")
 script = ExtResource("8_vu3bg")
 
 [node name="OffHand" type="TextureRect" parent="Background/M/Main/Middle/MiddleEquip"]
@@ -230,9 +252,13 @@ texture = ExtResource("2_lrvgl")
 
 [node name="Icon" type="TextureRect" parent="Background/M/Main/Middle/MiddleEquip/OffHand"]
 layout_mode = 1
-anchors_preset = 15
+anchors_preset = -1
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = -8.0
+offset_bottom = -8.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("10_g6fjj")
@@ -256,9 +282,13 @@ texture = ExtResource("2_lrvgl")
 
 [node name="Icon" type="TextureRect" parent="Background/M/Main/RightEquip/Back"]
 layout_mode = 1
-anchors_preset = 15
+anchors_preset = -1
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = -8.0
+offset_bottom = -8.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("3_821md")
@@ -273,9 +303,13 @@ texture = ExtResource("2_lrvgl")
 
 [node name="Icon" type="TextureRect" parent="Background/M/Main/RightEquip/Shoulders"]
 layout_mode = 1
-anchors_preset = 15
+anchors_preset = -1
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = -8.0
+offset_bottom = -8.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("4_7ngke")
@@ -290,9 +324,13 @@ texture = ExtResource("2_lrvgl")
 
 [node name="Icon" type="TextureRect" parent="Background/M/Main/RightEquip/Wrists"]
 layout_mode = 1
-anchors_preset = 15
+anchors_preset = -1
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = -8.0
+offset_bottom = -8.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("4_7ngke")
@@ -307,9 +345,13 @@ texture = ExtResource("2_lrvgl")
 
 [node name="Icon" type="TextureRect" parent="Background/M/Main/RightEquip/Hands"]
 layout_mode = 1
-anchors_preset = 15
+anchors_preset = -1
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = -8.0
+offset_bottom = -8.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("4_7ngke")
@@ -324,9 +366,13 @@ texture = ExtResource("2_lrvgl")
 
 [node name="Icon" type="TextureRect" parent="Background/M/Main/RightEquip/Fingers"]
 layout_mode = 1
-anchors_preset = 15
+anchors_preset = -1
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = -8.0
+offset_bottom = -8.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("4_7ngke")

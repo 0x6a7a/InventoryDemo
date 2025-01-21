@@ -2,7 +2,8 @@ extends Control
 
 var template_inv_slot = preload("res://scenes/UI/templates/inv.tscn")
 
-@onready var gridcontainer = $Background/M/V/ScrollContainer/GridContainer
+@onready var gridcontainer = $Background/M/T/V/ScrollContainer/GridContainer
+@onready var tabcontainer = $Background/M/T
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -19,3 +20,7 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
 	pass
+
+
+func _on_button_pressed() -> void:
+	tabcontainer.current_tab = abs(tabcontainer.current_tab -1)

@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://bkmieuydujki5"]
+
+[ext_resource type="Script" path="res://data/Item.gd" id="1_uwpm5"]
+[ext_resource type="Texture2D" uid="uid://tc386v0lht1i" path="res://assets/UI_Elements/ERROR.png" id="2_s46lo"]
+
+[node name="Node" type="Node"]
+script = ExtResource("1_uwpm5")
+
+[node name="Icon" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(100, 100)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = -1812.0
+offset_bottom = -972.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_s46lo")
