@@ -1,8 +1,8 @@
 extends TextureRect
 
+## Start dragging the current item.
 func _get_drag_data(_pos):
-	
-	## 
+	## Get the inventory slot that the item texture is in
 	var inv_slot = get_parent().name
 	if PlayerData.inv_data[inv_slot]["Item"] != null:
 		var data = {}
@@ -17,14 +17,16 @@ func _get_drag_data(_pos):
 		drag_texture.texture = texture
 		drag_texture.size = Vector2(100,100)
 		
-		#
+		## Control node to center the Icon
 		var control = Control.new()
 		control.add_child(drag_texture)
 		drag_texture.position = -0.5 * drag_texture.size
 		set_drag_preview(control)
 		
+		## Pass along the data for the other slots to use
 		return data
-	
+
+## Check if player can drop the item.
 func _can_drop_data(_pos, data):
 	var target_inv_slot = get_parent().name
 	if PlayerData.inv_data[target_inv_slot]["Item"] == null:

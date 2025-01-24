@@ -41,6 +41,7 @@ func _can_drop_data(_pos, data):
 func _drop_data(_pos, data):
 	var target_equipment_slot = get_parent().name
 	var origin_slot = data["origin_node"].get_parent().name
+	print(data["origin_node"].get_parent().name)
 	
 	## Update the origin
 	if data["origin_panel"] == "Inventory":
@@ -59,3 +60,5 @@ func _drop_data(_pos, data):
 	## Update target texture
 	PlayerData.equipment_data[target_equipment_slot] = data["origin_item_id"]
 	texture = data["origin_texture"]
+	
+	
